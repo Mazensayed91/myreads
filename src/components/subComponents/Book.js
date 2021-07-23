@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Book component
+
 class Book extends React.Component{
 
     state = {
@@ -21,7 +23,7 @@ class Book extends React.Component{
                         <div className="book-cover" style = {this.props.style}></div>
                         <div className="book-shelf-changer">
                             <select onChange={(e)=>this.onSelectFormChange(e)}>
-                                    <option value="move" disabled selected value>Move to...</option>
+                                                    <option value="move" disabled selected value>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
                                 <option value="wantToRead">Want to Read</option>
                                 <option value="read">Read</option>
