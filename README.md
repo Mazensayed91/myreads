@@ -17,6 +17,11 @@ To get started developing right away:
 * start the development server with `npm start`
 
 ## What You're Getting
+
+### Components Tree
+
+![image](https://user-images.githubusercontent.com/54520113/126916639-07d08186-2a11-4dcf-a30e-e0887f5a6ecd.png)
+
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
