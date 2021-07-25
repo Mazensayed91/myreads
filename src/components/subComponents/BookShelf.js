@@ -16,14 +16,15 @@ class BookShelf extends React.Component {
                     <ol className="books-grid">
                         {
                             this.props.books.map((book) => {
-                            return <Book
+                                return <Book
                                         onSelectChange = {this.onSelectFormChange}
+                                        shelf = {this.props.shelf}
                                         key = {book.id}
                                         style = {{ width: 128,
                                                     height: 188,
-                                                    backgroundImage: `url("${book.imageLinks.thumbnail}")` }}
+                                                    backgroundImage:book.imageLinks? `url("${book.imageLinks.thumbnail}")`:`url()` }}
                                         title = {book.title}
-                                        author ={book.author}
+                                        author ={book.authors}
                                         id = {book.id}
                                  />
                             })

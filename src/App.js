@@ -38,7 +38,14 @@ class BooksApp extends React.Component {
   }
   onSearchChange = async (query) => {
     console.log("query", query);
-    let search_books = await search(query);
+    let search_books;
+    if (query)
+    {
+      search_books = await search(query);
+    }
+    else{
+      search_books = [];
+    }
     console.log("books", search_books);
     this.setState({
       search_books: search_books
@@ -52,7 +59,7 @@ class BooksApp extends React.Component {
           <Router>
             <Switch>
               <Route path="/search">
-                <SearchPage search_books={this.state.search_books} onSearchChange={this.onSearchChange}  onSelectChange={this.onSelectFormChange}/>
+                <SearchPage books = {this.state.books} search_books={this.state.search_books} onSearchChange={this.onSearchChange}  onSelectChange={this.onSelectFormChange}/>
               </Route>
               <Route path="/">
                 <BookShelfPage books={this.state.books} onSelectChange={this.onSelectFormChange}/>

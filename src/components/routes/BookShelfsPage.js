@@ -14,6 +14,7 @@ class BookShelfPage extends React.Component {
         this.props.onSelectChange(a, b);
     }
 
+
     render(){
         return(
             <div className="list-books">
@@ -22,9 +23,9 @@ class BookShelfPage extends React.Component {
                 </div>
                 <div className="list-books-content">
                     <div>
-                        <BookShelf status = 'Currently Reading' books = {this.props.books.filter((book) =>  book.shelf === 'currentlyReading')} onSelectChange = {this.onSelectFormChange}/>
-                        <BookShelf status = 'Want to Read' books = {this.props.books.filter((book) =>  book.shelf === 'wantToRead')} onSelectChange = {this.onSelectFormChange}/>
-                        <BookShelf status = 'Read' books = {this.props.books.filter((book) =>  book.shelf === 'read')} onSelectChange = {this.onSelectFormChange}/>
+                        <BookShelf shelf = "currentlyReading" status = 'Currently Reading' books = {this.props.books.filter((book) =>  book.shelf === 'currentlyReading')} onSelectChange = {this.onSelectFormChange}/>
+                        <BookShelf shelf = "wantToRead" status = 'Want to Read' books = {this.props.books.filter((book) =>  book.shelf === 'wantToRead')} onSelectChange = {this.onSelectFormChange}/>
+                        <BookShelf shelf = "read" status = 'Read' books = {this.props.books.filter((book) =>  book.shelf === 'read')} onSelectChange = {this.onSelectFormChange}/>
                     </div>
                 </div>
                 <div className="open-search">
